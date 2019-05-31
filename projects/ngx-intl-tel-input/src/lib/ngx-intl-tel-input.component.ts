@@ -79,7 +79,14 @@ export class NgxIntlTelInputComponent implements OnInit {
 
 	public onPhoneNumberChange(): void {
 		this.value = this.phoneNumber;
-
+		if(this.is_an_email === true){
+			var emailValue = this.value; 
+			var phoneValue = null; 
+		}else{
+			emailValue = null; 
+			phoneValue = this.value; 
+		}
+		
 		let number: lpn.PhoneNumber;
 		try {
 			number = this.phoneUtil.parse(this.phoneNumber, this.selectedCountry.iso2.toUpperCase());
@@ -106,7 +113,10 @@ export class NgxIntlTelInputComponent implements OnInit {
 			this.propagateChange(null);
 		} else {
 			this.propagateChange({
-				number: this.value,
+				// value: this.value,
+				number: phoneValue,
+				email: emailValue, 
+				is_an_email: this.is_an_email,
 				internationalNumber: number ? this.phoneUtil.format(number, lpn.PhoneNumberFormat.INTERNATIONAL) : '',
 				nationalNumber: number ? this.phoneUtil.format(number, lpn.PhoneNumberFormat.NATIONAL) : '',
 				countryCode: countryCode.toUpperCase()
@@ -118,16 +128,17 @@ export class NgxIntlTelInputComponent implements OnInit {
 		this.selectedCountry = country;
 
 		if (this.phoneNumber.length > 0) {
-			this.value = this.phoneNumber;
-
 			let number: lpn.PhoneNumber;
 			try {
 				number = this.phoneUtil.parse(this.phoneNumber, this.selectedCountry.iso2.toUpperCase());
 			} catch (e) {
+
 			}
 
 			this.propagateChange({
 				number: this.value,
+				email: this.value,
+				is_an_email: this.is_an_email,
 				internationalNumber: number ? this.phoneUtil.format(number, lpn.PhoneNumberFormat.INTERNATIONAL) : '' ,
 				nationalNumber: number ? this.phoneUtil.format(number, lpn.PhoneNumberFormat.NATIONAL) : '',
 				countryCode: this.selectedCountry.iso2.toUpperCase()
@@ -150,13 +161,13 @@ export class NgxIntlTelInputComponent implements OnInit {
 			this.showCountrySelector = true;
 			this.is_an_email = false; 
 			this.email = null; 
-			console.log('phone number input'); 
+			// console.log('phone number input'); 
 		}
 		else{
 			this.showCountrySelector = false;
 			this.is_an_email = true; 
 			this.email = this.phoneNumber; 
-			console.log('email input');
+			// console.log('email input');
 		}
 	}
 

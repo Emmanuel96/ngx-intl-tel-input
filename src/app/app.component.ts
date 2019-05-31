@@ -8,6 +8,6 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class AppComponent {
 	phoneForm = new FormGroup({
-		phone: new FormControl(undefined, [Validators.required])
+		phone_or_email: new FormControl(undefined, [Validators.required])
 	});
 }
