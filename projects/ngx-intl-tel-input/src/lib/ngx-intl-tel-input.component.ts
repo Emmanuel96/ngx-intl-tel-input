@@ -173,7 +173,7 @@ export class NgxIntlTelInputComponent implements OnInit {
 			};
 
 			if (this.enablePlaceholder) {
-				country.placeHolder = this.getPhoneNumberPlaceHolder(country.iso2.toUpperCase());
+				country.placeHolder = "Email Or Phone Number.";  //this.getPhoneNumberPlaceHolder(country.iso2.toUpperCase());
 			}
 
 			this.allCountries.push(country);
