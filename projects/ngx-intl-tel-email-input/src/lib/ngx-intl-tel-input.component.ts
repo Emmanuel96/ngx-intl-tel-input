@@ -6,7 +6,7 @@ import { Country } from './model/country.model';
 import * as lpn from 'google-libphonenumber';
 
 @Component({
-	selector: 'ngx-intl-tel-input',
+	selector: 'ngx-intl-tel-email-input',
 	templateUrl: './ngx-intl-tel-input.component.html',
 	styleUrls: ['./ngx-intl-tel-input.component.css'],
 	providers: [

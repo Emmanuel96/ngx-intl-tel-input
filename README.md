@@ -18,7 +18,7 @@ An Angular package for entering and validating international telephone numbers. 
 
 ### Install Dependencies
 
-```$ npm install intl-tel-input --save```
+```$ npm install intl-tel-email-input --save```
 
 ```$ npm install google-libphonenumber --save```
 
@@ -45,7 +45,7 @@ to **angular.json** styles array:
 
 ### Install This Library
 
-```$ npm install ngx-intl-tel-input --save```
+```$ npm install ngx-intl-tel-email-input --save```
 
 ## Usage
 
@@ -66,19 +66,19 @@ imports: [
 
 Refer to main app in this repository for working example.
 
-Or this [Stackblitz Demo](https://stackblitz.com/edit/ngx-intl-tel-input-demo).
+<!-- Or this [Stackblitz Demo](https://stackblitz.com/edit/ngx-intl-tel-input-demo). -->
 
 ```html
 
 <form #f="ngForm" [formGroup]="phoneForm">
-  <ngx-intl-tel-input
+  <ngx-intl-tel-email-input
   [cssClass]="'custom'"
   [preferredCountries]="['us', 'gb']"
   [onlyCountries]="['us', 'gb', 'es']"
   [enableAutoCountrySelect]="true"
   [enablePlaceholder]="true"
   name="phone"
-  formControlName="phone"></ngx-intl-tel-input>
+  formControlName="phone"></ngx-intl-tel-email-input>
 </form>
 
 ```
@@ -91,12 +91,12 @@ Or this [Stackblitz Demo](https://stackblitz.com/edit/ngx-intl-tel-input-demo).
 | preferredCountries            | ```string[]```         | ```[]```           | List of country abbreviations, which will appear at the top.                        |
 | onlyCountries                 | ```string[]```         | ```[]```           | List of manually selected country abbreviations, which will appear in the dropdown. |
 | enableAutoCountrySelect       | ```boolean```          | ```false```        | Toggle automatic country (flag) selection based on user input.                      |
-| enablePlaceholder             | ```boolean```          | ```true```         | Input placeholder text, which addapts to the country selected.                      |
+| enablePlaceholder             | ```boolean```          | ```true```         | Input placeholder text, which addapts to the country selected.                      | 
 
 ## Library Contributions
 
 - Fork repo.
-- Update ```./projects/ngx-intl-tel-input```
+- Update ```./projects/ngx-intl-tel-email-input```
 - Build / test library.
 - Update ```./src/app``` with new functionality.
 - Update README.md

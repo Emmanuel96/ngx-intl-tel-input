@@ -3,14 +3,14 @@
   <h3>Test Email & International Telephone Input Form</h3>
   <br>
   <form #f="ngForm" [formGroup]="phoneForm">
-    <ngx-intl-tel-input
+    <ngx-intl-tel-email-input
     [cssClass]="'custom'"
     [preferredCountries]="['ng','us', 'gb']"
     [onlyCountries]="['ng','us', 'gb', 'ca']"
     [enableAutoCountrySelect]="true"
     [enablePlaceholder]="true"
     name="phone"
-    formControlName="phone_or_email"></ngx-intl-tel-input>
+    formControlName="phone_or_email"></ngx-intl-tel-email-input>
   </form>
   <br>
   <div><strong>Is input valid:</strong> <pre>{{ !f.form.controls['phone_or_email'].invalid }}</pre></div>
