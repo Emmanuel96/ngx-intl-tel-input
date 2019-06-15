@@ -20,10 +20,10 @@
     ],
     "paths": {
       "ngx-intl-tel-input": [
-        "dist/ngx-intl-tel-input"
+        "dist/ngx-intl-tel-email-input"
       ],
       "ngx-intl-tel-input/*": [
-        "dist/ngx-intl-tel-input/*"
+        "dist/ngx-intl-tel-email-input/*"
       ]
     }
   }

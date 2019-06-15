@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { NgxIntlTelInputService } from './ngx-intl-tel-input.service';
+import { NgxIntlTelInputService } from './ngx-intl-tel-email-input.service';
 
 describe('NgxIntlTelInputService', () => {
 	beforeEach(() => TestBed.configureTestingModule({}));

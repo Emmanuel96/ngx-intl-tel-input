@@ -1,5 +1,5 @@
 {
-  "name": "ngx-intl-tel-email-input-input",
+  "name": "ngx-intl-tel-email-input",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

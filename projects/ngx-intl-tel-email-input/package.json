@@ -1,5 +1,5 @@
 {
-  "name": "ngx-intl-tel-input",
+  "name": "ngx-intl-tel-email-input",
   "version": "2.1.1",
   "peerDependencies": {
     "@angular/common": "^7.1.0",

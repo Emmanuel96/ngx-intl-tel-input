@@ -1,14 +1,14 @@
 import { Component, OnInit, forwardRef, Input } from '@angular/core';
 import { ControlValueAccessor, NG_VALIDATORS, NG_VALUE_ACCESSOR, FormControl } from '@angular/forms';
 import { CountryCode } from './data/country-code';
-import { phoneNumberValidator } from './ngx-intl-tel-input.validator';
+import { phoneNumberValidator } from './ngx-intl-tel-email-input.validator';
 import { Country } from './model/country.model';
 import * as lpn from 'google-libphonenumber';
 
 @Component({
 	selector: 'ngx-intl-tel-email-input',
-	templateUrl: './ngx-intl-tel-input.component.html',
-	styleUrls: ['./ngx-intl-tel-input.component.css'],
+	templateUrl: './ngx-intl-tel-email-input.component.html',
+	styleUrls: ['./ngx-intl-tel-email-input.component.css'],
 	providers: [
 		CountryCode,
 		{
