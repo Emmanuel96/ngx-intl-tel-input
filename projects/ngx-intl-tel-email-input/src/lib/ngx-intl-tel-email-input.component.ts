@@ -14,7 +14,7 @@ import * as lpn from 'google-libphonenumber';
 		{
 			provide: NG_VALUE_ACCESSOR,
 			// tslint:disable-next-line:no-forward-ref
-			useExisting: forwardRef(() => NgxIntlTelInputComponent),
+			useExisting: forwardRef(() => NgxIntlTelEmailInputComponent),
 			multi: true
 		},
 		{
@@ -25,7 +25,7 @@ import * as lpn from 'google-libphonenumber';
 	]
 })
 
-export class NgxIntlTelInputComponent implements OnInit {
+export class NgxIntlTelEmailInputComponent implements OnInit {
 
 	@Input() value = '';
 	@Input() preferredCountries: Array<string> = [];
